@@ -1,0 +1,16 @@
+.bb{
+    background-color: violet;
+    height:900px;
+    margin-top: -15px;
+}
+body{
+    background-color: pink;
+}
+#myCarousel{
+    width: 600px;
+    margin: 0 auto;
+    
+}
+.gg{
+    position:  fixed !important;
+}
