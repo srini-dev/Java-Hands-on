@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.pad-top {
+	padding-top: 10%;
+}
+
+.pad-top h5 {
+	padding-top: 1em;
+}
+
+#logo {
+	position: absolute;
+	right: 2.5em;
+	top: 2.5em;
+}
+
+.buttons {
+	margin-right: 5px;
+}
+
+#tophalf {
+	background: #43cea2; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #43cea2, #185a9d);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	max-height: 100%;
+	color: white;
+}
+
+.pull-right {
+	float: right;
+	display: inline;
+}
+
+.btn {
+	border: 0px;
+	border-radius: 0px;
+}
+
+#tophalf ul {
+	list-style: none;
+	width: 55%;
+	margin: 0 auto;
+	align-content: center;
+	bottom: 0px;
+}
+
+#tophalf ul li {
+	display: inline;
+	float: left;
+	box-shadow: 2px 2.5px 1px #000;
+}
+
+#tophalf ul li img {
+	width: 150px;
+	height: 150px;
+}
+
+#bottomhalf {
+	background-color: white;
+	max-height: 100%;
+	color: black;
+	box-shadow: 10px 10px 10px #fff;
+}
+
+#bottomhalf ul {
+	list-style: none;
+	width: 55%;
+	margin: 0 auto;
+	align-content: center;
+	bottom: 0px;
+}
+
+.aaa {
+	position: absolute;
+	right: 45px;
+	z-index: 1000000;
+	top: 30px;
+}
+
+#bottomhalf ul li {
+	display: inline;
+	float: left;
+	box-shadow: 2px 2.5px 2px #000;
+}
+
+#bottomhalf ul li img {
+	width: 200px;
+	height: 150px;
+}
+
+div#logo li {
+	list-style: none;
+	display: inline-block;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.text {
+	text-align: justify;
+	padding-top: 3em;
+}
+
+.brand {
+	padding-top: 2em;
+	align-content: center;
+}
+
+.navbar {
+	border-radius: 0px !important; color : white !important;
+	background: #43cea2; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #43cea2, #185a9d);
+	color: white !important;
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar a {
+	color: white !important;
+}
+
+#mobile-view {
+	display: none;
+}
+
+@media ( max-width :1199px) {
+	#tophalf ul {
+		width: 70%;
+	}
+	#bottomhalf ul {
+		width: 70%;
+	}
+}
+
+@media ( max-width :990px) {
+	#tophalf ul {
+		width: 85%;
+	}
+	#bottomhalf ul {
+		width: 85%;
+	}
+}
+
+@media ( max-width :753px) {
+	#tophalf ul {
+		width: 95%;
+	}
+	#bottomhalf ul {
+		width: 95%;
+	}
+}
+
+@media ( max-width :679px) {
+	#desktop-view {
+		display: none;
+	}
+	#mobile-view {
+		display: block;
+	}
+}

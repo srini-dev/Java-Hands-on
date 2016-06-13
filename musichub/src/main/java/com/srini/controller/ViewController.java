@@ -29,6 +29,7 @@ import java.util.*;
 @Controller
 public class ViewController {
 
+	
 	@Autowired
 	private ProductData pData;
 	@Autowired
@@ -38,7 +39,7 @@ public class ViewController {
 	
 	String message = "Welcome ! ";
 	String setName = ""; 
-		
+	public static String stat="off";	
 	
 	
 	@RequestMapping("/register")
@@ -50,7 +51,7 @@ public class ViewController {
 	@RequestMapping("/cat1")
 	public String getCats(@RequestParam(value="name", required=false,defaultValue="") String name)
 	{
-		return "GridCat1";
+		return "GridCat";
 	}
 	@RequestMapping("/imgA")
 	public String getImageData()
@@ -135,6 +136,7 @@ public class ViewController {
 	    return Prods;
 	}
 	
+
 	
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
@@ -171,6 +173,7 @@ public class ViewController {
 
 		else if (logout != null) {
 			model.addObject("msg", "");
+			
 			model.setViewName("index");
 		}
 		else

@@ -6,46 +6,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-
-    <meta charset="UTF-8">
-    <title>Hover Effect CSS for Bootstrap Gallery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
-	
-	
-	
-    <!-- 
-    <link rel="stylesheet" href="css/normalize.css">
-
-    
-        <link rel="stylesheet" href="css/style2.css">
- -->
-  <meta charset="utf-8">
+	 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-	  <meta name="author" content="">
+	 <meta name="author" content="">
 	  <link rel="icon" type="image/png" href="ico/favicon-32.png"/>
-    <!-- Icon For iOS 2.0+ and Android 2.1+ -->
     <link rel="apple-touch-icon-precomposed" href="ico/favicon-152.png">
-    <!-- Icon For IE10 Metro -->
     <meta name="msapplication-TileColor" content="#fff">
     <meta name="msapplication-TileImage" content="ico/favicon-144.png">
-
     <title>Bootstrap Template</title>
-
-    <!-- Bootstrap Latest compiled and minified CSS -->
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-	  <!-- Font-Awesome -->
 	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
- <script src="<%=request.getContextPath() %>/resources/cssbxhr/angular.min.js"></script>
+	 <script src="<%=request.getContextPath() %>/resources/cssbxhr/angular.min.js"></script>
 	<script src="<%=request.getContextPath() %>/resources/cssbxhr/style2.css"></script>
  </head>
 <body>
@@ -125,19 +105,6 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    
-    
-    
-    
-
 
 <!-- ******************************** -->
 </body>

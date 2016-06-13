@@ -37,13 +37,7 @@ body{}
 				document.getElementById("logoutForm").submit();
 			}
 		</script>
-		<c:if test="${pageContext.request.userPrincipal.name != null}">
-			<div style="width:100%; background-color:pink;">
-				Hi : ${pageContext.request.userPrincipal.name} | <a
-					href="javascript:formSubmit()"> Logout</a>
-			</div>
-		</c:if>
-
+	
 
 	</sec:authorize>
 		
@@ -51,23 +45,27 @@ body{}
 
 <div  class="container-fluid" style="background-color:#633974;width:100%; margin:5px auto;padding:0px 10px 15px 10px; position: float ;">
 	<div>
-		<h2 style="font-weight:900; color:FF9999; float: left: ">DT TRAINING</h2>
+		<h2 style="font-weight:900; color:FF9999; float: left: ">MUSIC HUB DT TRAINING</h2>
 	</div>
 	<div>
-		<div style="position: float;">
-			<h2 style="font-weight:900; color:FF9999; float: left;  ">MUSIC HUB</h2>
-		</div>
 		<div style="float: right; ">
 		
-	
-					<a href="register" class="btn btn-primary"  >REGISTER</a>
+			<c:if test="${pageContext.request.userPrincipal.name == null}">
+			<div style="color:pink; font-weight: 400;">
+				Hi : ${pageContext.request.userPrincipal.name} | <a
+					href="javascript:formSubmit()"> Logout</a>
+			</div>
+				
+			<a href="register" class="btn btn-primary"  >REGISTER</a>
 			<a href="login"  class="btn btn-warning" >LOGIN</a>
+			
 			<a href="admin?name=allpro"  class="btn btn-warning" >ADMIN</a>
-	
+		</c:if>
 			
 		</div>
 	</div>
 </div>
+
 <div style="bgcolor="#0000; width:80%; margin: 30px;">
   
   <!-- Slides Container -->

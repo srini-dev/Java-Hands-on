@@ -69,7 +69,7 @@ body{}
 			<h2 style="font-weight:900; color:FF9999; float: left;  ">MUSIC HUB</h2>
 		</div>
 		<div style="float: right; ">
-			
+				<a href="welcome"  class="btn btn-warning" >HOME</a>
 			
 		</div>
 	</div>

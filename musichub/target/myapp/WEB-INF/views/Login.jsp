@@ -69,8 +69,8 @@ body{}
 			<h2 style="font-weight:900; color:FF9999; float: left;  ">MUSIC HUB</h2>
 		</div>
 		<div style="float: right; ">
-			<a href="register" class="btn btn-primary"  >REGISTER</a>
-			<a href="login"  class="btn btn-warning" >LOGIN</a>
+				<a href="welcome"  class="btn btn-warning" >HOME</a>
+			
 		</div>
 	</div>
 </div>

@@ -53,6 +53,45 @@ function mainController($scope, $http) {
 </head>
 <body>
 <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+<%-- <h1>Title : ${title}</h1>
+	<h1>Message : ${message}</h1> --%>
+		
+<!-- BODY STARTS -->
+
+<div  class="container-fluid" style="background-color:#633974;width:100%; margin:5px auto;padding:0px 10px 15px 10px; position: float ;">
+	<div>
+		<h2 style="font-weight:900; color:FF9999; color:pink; float: left: ">MUSIC HUB ON DT TRAINING</h2>
+	</div>
+	<div>
+				<div style="float: right; ">
+		
+	
+	<sec:authorize access="hasRole('ROLE_USER')">
+	<c:url value="/j_spring_security_logout" var="logoutUrl" />
+		<form action="${logoutUrl}" method="post" id="logoutForm">
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+		</form>
+		<script>
+			function formSubmit() {
+				document.getElementById("logoutForm").submit();
+			}
+		</script>
+		<c:if test="${pageContext.request.userPrincipal.name != null}">
+			<div style="width:100%; color:pink;font-weight: 400; margin-right: 25px;">
+				Hi : ${pageContext.request.userPrincipal.name} | <a
+					href="javascript:formSubmit()"> Logout</a>
+			</div>
+		</c:if>
+
+
+	</sec:authorize>
+	
+			
+		</div>
+	</div>
+</div>
+
 <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 
 <div class="cotainer">
@@ -148,7 +187,7 @@ function mainController($scope, $http) {
       </tr>
     </tbody>
     </table>
-     <a href="welcome" class="btn btn-primary"  >HOME</a>
+     <!-- <a href="welcome" class="btn btn-primary"  >HOME</a> -->
     </div>
    
   
