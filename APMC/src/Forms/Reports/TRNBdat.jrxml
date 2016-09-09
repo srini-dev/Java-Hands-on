@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="648" pageHeight="842" columnWidth="608" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d9e11860-73b2-4f31-90a8-d7b10d15b3db">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="fdt" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tdt" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Customer,Transaction where Customer.cid = Transaction.cid And Transaction.tdat>=$P{fdt} AND Transaction.tdat<=$P{tdt} order by Customer.cid, Transaction.cid And Transaction.tid asc;]]>
+	</queryString>
+	<field name="cid" class="java.lang.String"/>
+	<field name="regdat" class="java.sql.Timestamp"/>
+	<field name="cnam" class="java.lang.String"/>
+	<field name="caddrs" class="java.lang.String"/>
+	<field name="ctown" class="java.lang.String"/>
+	<field name="cphno" class="java.lang.String"/>
+	<field name="cpic" class="java.lang.String"/>
+	<field name="tid" class="java.lang.String"/>
+	<field name="slno" class="java.lang.String"/>
+	<field name="tdat" class="java.sql.Timestamp"/>
+	<field name="reason" class="java.lang.String"/>
+	<field name="amt" class="java.lang.Double"/>
+	<field name="totamt" class="java.lang.Double"/>
+	<field name="status" class="java.lang.String"/>
+	<group name="cnam">
+		<groupExpression><![CDATA[$F{cnam}]]></groupExpression>
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="4"/>
+		</groupFooter>
+	</group>
+	<group name="ctown">
+		<groupExpression><![CDATA[$F{ctown}]]></groupExpression>
+		<groupHeader>
+			<band height="3"/>
+		</groupHeader>
+	</group>
+	<group name="cphno">
+		<groupExpression><![CDATA[$F{cphno}]]></groupExpression>
+	</group>
+	<group name="totamt">
+		<groupExpression><![CDATA[$F{totamt}]]></groupExpression>
+	</group>
+	<group name="phno">
+		<groupExpression><![CDATA[$F{cphno}]]></groupExpression>
+		<groupHeader>
+			<band height="2"/>
+		</groupHeader>
+	</group>
+	<group name="amt">
+		<groupExpression><![CDATA[$F{totamt}]]></groupExpression>
+		<groupHeader>
+			<band height="26">
+				<textField>
+					<reportElement style="SubTitle" x="526" y="1" width="81" height="20" forecolor="#000000" uuid="8c9c6c69-4a2e-478f-83ca-7d1ed5be8648"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totamt}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="168" y="1" width="153" height="24" forecolor="#000000" uuid="07484e78-a1d4-40a7-a4a2-e4091d3241d4"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ctown}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="403" y="2" width="114" height="20" forecolor="#000000" uuid="117af532-20ec-418a-bb5a-be4ba1fdadcb"/>
+					<textElement>
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cphno}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="SubTitle" x="7" y="1" width="161" height="24" forecolor="#000000" uuid="3f628ad4-e2ec-45a3-bf7b-63ea989eab49"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cnam}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement style="SubTitle" x="327" y="-1" width="67" height="24" forecolor="#000000" uuid="f4c7f0f4-2322-47d7-9488-5796628e1320"/>
+					<textElement>
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tdat}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="2" y="0" width="606" height="33" uuid="cabc9cab-be72-4ef5-978b-7da4e8f3ffd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Agricultural Produce Market Committee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="40" width="608" height="22" uuid="dbd0e7f4-6cc1-4d39-bae0-7b4e6042ad33"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[All Customer Transaction Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="7" y="0" width="120" height="25" forecolor="#000000" uuid="32f61ea7-a4e0-417a-a63d-d4f26aec59e6"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಹೆಸರು]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="168" y="0" width="96" height="25" forecolor="#000000" uuid="cb08dadd-7194-44b8-bdb3-a64935b03c52"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಊರು]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="403" y="0" width="114" height="25" forecolor="#000000" uuid="b853b9ba-0426-41e7-8bc4-5b854745358c"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಮೊಬೈಲ್‍ ಸಂಖ್ಯೆ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="526" y="0" width="81" height="25" forecolor="#000000" uuid="5b4edc68-ddd5-448d-b3da-c9290d82d6ee"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಹಣ ಮೊತ್ತ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="325" y="0" width="69" height="25" forecolor="#000000" uuid="3c47a5ac-c12f-4716-bb35-8a632c7f0f2b"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ದಿನಾಂಕ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

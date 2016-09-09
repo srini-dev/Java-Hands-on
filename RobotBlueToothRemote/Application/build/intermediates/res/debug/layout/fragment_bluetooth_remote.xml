@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal" >
+
+         <EditText
+             android:id="@+id/edit_text_out"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:layout_weight="1" />
+
+         <Button
+             android:id="@+id/button_send"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/send" />
+     </LinearLayout>-->
+    <ScrollView
+        style="@style/Widget.SampleMessageTile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="#4bac98c7">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:layout_margin="0dp"
+                        android:id="@+id/btnaa"
+                        android:background="@drawable/probtnapressa"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Wake Up"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                android:id="@+id/btn0"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btn4"
+                android:layout_toEndOf="@+id/btn4" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:background="@drawable/probtnapressb"
+                        android:id="@+id/btnbb"
+                        android:layout_above="@+id/btn2"
+                        android:layout_toLeftOf="@+id/btn4"
+                        android:layout_toStartOf="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Start"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:background="@drawable/probtnapressc"
+                        android:id="@+id/btncc"
+                        android:layout_above="@+id/btn1"
+                        android:layout_centerHorizontal="true" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Head Up"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+
+
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressd"
+
+                        android:id="@+id/btndd"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Head Down"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapresse"
+                        android:id="@+id/btnee"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Turn Right"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+                        android:background="@drawable/probtnapressf"
+                        android:id="@+id/btnff"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Turn Left"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressg"
+                        android:id="@+id/btngg"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Roll Right"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressh"
+                        android:id="@+id/btnhh"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Roll Left"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressi"
+                        android:id="@+id/btnii"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Open Mounth"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressj"
+                        android:id="@+id/btnjj"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Close Mouth"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressk"
+                        android:id="@+id/btnkk"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Tired"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressl"
+                        android:id="@+id/btnll"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Fear"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressm"
+                        android:id="@+id/btnm"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Sad"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressn"
+                        android:id="@+id/btnn"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Laugh"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapresso"
+                        android:id="@+id/btno"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Surprise"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--row pqr-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressp"
+                        android:id="@+id/btnp"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Close Eyes"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressq"
+                        android:id="@+id/btnq"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Open Eyes"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressr"
+                        android:id="@+id/btnr"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Close Left Eye"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+<!--end-->
+
+            <!--row stu-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapresss"
+                        android:id="@+id/btns"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="close right eye"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapresst"
+                        android:id="@+id/btnt"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="EyeBalDown"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="150px"
+                        android:layout_height="150px"
+
+                        android:background="@drawable/probtnapressu"
+                        android:id="@+id/btnu"
+                        android:layout_below="@+id/btn1"
+                        android:layout_alignLeft="@+id/btn4"
+                        android:layout_alignStart="@+id/btn4" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="EyeBalUp"
+                        android:textStyle="bold"
+                        android:textColor="#243d7c" />
+                </LinearLayout>
+            </LinearLayout>
+
+<!--end-->
+            <!--row vw-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+
+                android:background="@drawable/probtnapressv"
+                android:id="@+id/btnv"
+                android:layout_below="@+id/btn1"
+                android:layout_alignLeft="@+id/btn4"
+                android:layout_alignStart="@+id/btn4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="EyeBrowDown"
+                android:textStyle="bold"
+                android:textColor="#243d7c" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+
+                android:background="@drawable/probtnapressw"
+                android:id="@+id/btnw"
+                android:layout_below="@+id/btn1"
+                android:layout_alignLeft="@+id/btn4"
+                android:layout_alignStart="@+id/btn4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="EyeBrowup"
+                android:textStyle="bold"
+                android:textColor="#243d7c" />
+        </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout><!-- From: file:/D:/Jyoti/Original%20V6/RobotBlueToothRemote/Application/src/main/res/layout/fragment_bluetooth_remote.xml -->

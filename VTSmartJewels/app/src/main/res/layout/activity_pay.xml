@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="com.vachana.com.vtsmartjewels.PayActivity">
+
+    <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/activity_pay"
+        tools:context="com.vachana.com.vtsmartjewels.PayActivity">
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#000000"
+            android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/rows1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/row1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bills with Balance deatails"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/textView4" />
+
+</LinearLayout>
+        <LinearLayout
+            android:id="@+id/rows9"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/row1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/bd1"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/bd2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:text="BillNo"
+                android:textColor="#FFFF99"
+                android:textStyle="bold"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/bd2"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/bd1"
+                android:text="Date"
+                android:textColor="#FFFF99"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/bd3"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/bd2"
+                android:text="Customer Name"
+
+                android:textColor="#FFFF99"
+                android:textStyle="bold"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:text="Payable Amt"
+                android:id="@+id/bd4"
+                android:textColor="#FFFF99"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/bd3"
+                android:gravity="right"
+                android:textSize="24sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rows2"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/row1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+               >
+
+                <ListView
+                    android:id="@+id/billsPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:choiceMode="singleChoice"
+                    android:fadingEdgeLength="5sp"
+                    android:dividerHeight="0.000001dp"
+                    android:divider="#555555"
+                    android:smoothScrollbar="true">
+
+                </ListView>
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rows3"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/row1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Payment"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/textView5" />
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rows4"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/row1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                >
+
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bill No"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView6" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Amount"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView7" />
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Id"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView11" />
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Date"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView8" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Amount"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView9" />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:id="@+id/textView10" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rows5"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/row1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="Bill No"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl1"
+                    android:layout_weight="0.00" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="Bill Amount"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl2"
+                    android:layout_weight="0.00" />
+                <EditText
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="Pay Id"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl3"
+                    android:layout_weight="0.00" />
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="dd/MM/yyyy"
+
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl4"
+                    android:layout_weight="0.00" />
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="Pay Amount"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl5"
+                    android:layout_weight="0.00" />
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="Balance"
+                    android:inputType="number"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittextbg"
+                    android:textColorHint="#666666"
+                    android:id="@+id/tbl6"
+                    android:layout_weight="0.00" />
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rows6"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/row1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/btnpress"
+                android:text="NEW"
+                android:onClick="newPay"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/button4" />
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/btnpress"
+                android:text="SAVE"
+
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/btnsavpay" />
+            <Button
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/btnpress"
+                android:text="EDIT"
+                android:onClick="newPay"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/btnedtpay" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/rows10"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/row1"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/blpd1"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:text="PayId"
+                android:textColor="#0F62F0"
+                android:textStyle="bold"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/blpd2"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/blpd1"
+                android:text="Payable"
+                android:textColor="#0F62F0"
+                android:textStyle="bold"
+
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/blpd3"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/blpd2"
+                android:text="PayDate"
+                android:textColor="#0F62F0"
+                android:textStyle="bold"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="Paid"
+                android:id="@+id/blpd4"
+                android:textColor="#0F62F0"
+                android:textStyle="bold"
+
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/blpd3"
+                android:gravity="right"
+                android:textSize="24sp"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="Balance"
+                android:id="@+id/blpd5"
+                android:textColor="#0F62F0"
+                android:textStyle="bold"
+
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/blpd4"
+                android:gravity="right"
+                android:textSize="24sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rows7"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/row1"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal" >
+                <ListView
+                    android:id="@+id/paylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:choiceMode="singleChoice"
+                    android:fadingEdgeLength="5sp"
+                    android:dividerHeight="0.000001dp"
+                    android:divider="#555555"
+                    android:smoothScrollbar="true" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rows8"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/row1"
+                android:layout_marginTop="5dp"
+                android:background="#666666"
+                android:orientation="horizontal" >
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="532" pageHeight="842" columnWidth="492" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5c9a595-8f95-4a4f-9539-0930caacca28">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\java project\\APMC\\src\\TestRep\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cstid" class="java.lang.String"/>
+	<parameter name="acid" class="java.lang.String"/>
+	<parameter name="pslno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cname" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from CstPrdInv,CstPrdSell where CstPrdSell.cid = CstPrdInv.cid And CstPrdInv.cid = $P{cstid} And CstPrdInv.slno = $P{pslno} AND CstPrdSell.acid = $P{acid};]]>
+	</queryString>
+	<field name="cid" class="java.lang.String"/>
+	<field name="slno" class="java.lang.String"/>
+	<field name="icode" class="java.lang.String"/>
+	<field name="iname" class="java.lang.String"/>
+	<field name="pack" class="java.lang.String"/>
+	<field name="pidate" class="java.sql.Timestamp"/>
+	<field name="pstatus" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="acid" class="java.lang.String"/>
+	<field name="product" class="java.lang.String"/>
+	<field name="soldate" class="java.sql.Timestamp"/>
+	<field name="prdwgt" class="java.lang.Integer"/>
+	<field name="qrate" class="java.lang.Integer"/>
+	<field name="totamt" class="java.lang.Integer"/>
+	<group name="slno">
+		<groupExpression><![CDATA[$F{slno}]]></groupExpression>
+		<groupHeader>
+			<band height="42">
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="77" y="23" width="140" height="16" uuid="1459c21c-d7a7-4151-ac23-dcb5360d929f"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{iname}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="301" y="24" width="29" height="15" uuid="8366f5f0-6fda-43bf-b879-48322436ee84"/>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pack}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement style="Detail" positionType="Float" x="77" y="0" width="81" height="23" uuid="26e4e631-963f-49a2-86f2-aa5ce0944841"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pidate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="2" y="23" width="75" height="16" forecolor="#000000" uuid="ab2d334a-b730-404a-bb8b-0bce021b7090"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಉತ್ಪನ್ನ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="247" y="23" width="52" height="16" forecolor="#000000" uuid="b6f7abe1-5eef-4197-8778-2424c9653be9"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಚಿಲಗಳು]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="2" y="0" width="75" height="23" forecolor="#000000" uuid="eb7c3b63-131f-41a6-84db-f8e47de5b5be"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ದಿನಾಂಕ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="422" y="24" width="72" height="15" uuid="287a34e1-83d9-4c1b-b081-d77658cc74a9"/>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pstatus}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="362" y="23" width="60" height="16" forecolor="#000000" uuid="39de5a22-35ca-4408-aae4-9cd7443ad538"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಗುಣಮಟ್ಟ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="7"/>
+		</groupFooter>
+	</group>
+	<group name="acid">
+		<groupExpression><![CDATA[$F{acid}]]></groupExpression>
+		<groupHeader>
+			<band height="4"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="86">
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="395" y="30" width="98" height="17" uuid="a953cbbd-16f1-432f-82e4-8fc2f20fcf45"/>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{qrate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="2" y="5" width="107" height="17" forecolor="#000000" uuid="8d637fca-c319-43fe-9eb4-6396250b6449"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಮಾರಾಟದ ದಿನಾಂಕ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement style="Detail" positionType="Float" x="119" y="5" width="122" height="17" uuid="a62ba965-facf-45aa-89e3-5245cb2094a5"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{soldate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="395" y="5" width="98" height="18" uuid="e9a7e34e-1407-4e94-a9ad-0b8f86f7bcf4"/>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{prdwgt}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="395" y="62" width="98" height="18" uuid="314cb010-0b8b-4d0e-a4c4-f359cea9adb6"/>
+					<textElement textAlignment="Right">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totamt}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Column header" x="320" y="5" width="75" height="18" forecolor="#000000" uuid="d482e6a8-06b7-4c1f-9ab3-ee3cb81fe6e3"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಒಟ್ಟು ತೂಕ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="285" y="30" width="108" height="17" forecolor="#000000" uuid="c20275c7-1377-473b-98b8-2e7136219c3b"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1 ಕ್ವಿಂಟಲ್‍ನ ಮೊತ್ತ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="320" y="66" width="73" height="18" forecolor="#000000" uuid="eb57db9c-d6cf-4ae7-8a25-e0f004f1691d"/>
+					<textElement>
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಒಟ್ಟು ಮೊತ್ತ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="274" y="62" width="219" height="1" uuid="94328701-89a8-469c-89bf-cdd21eda66d4"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="492" height="35" uuid="c3d083d0-5169-4d5f-b410-3fc8c672b271"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agricultural Produce Market Committee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="494" height="28" uuid="e0221bcc-f1d1-4b07-b5dc-20cf841742af"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಉತ್ಪನ್ನದ ಹರಾಜು ಮತ್ತು ಮಾರಾಟದ ವಿವರ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="2" y="19" width="107" height="15" forecolor="#000000" uuid="f7db53df-b82c-49fa-98f6-73d46daada96"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಖಾತೆದಾರನ ಹೆಸರು]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="0" width="107" height="15" forecolor="#000000" uuid="5c2f4f25-f021-4bed-9c2a-1100178251a9"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಖಾತೆ ಸಂಖ್ಯೆ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="113" y="0" width="195" height="15" uuid="702e7ecb-353d-40a0-baaa-3bcf524aee12"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cstid}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Detail" positionType="Float" x="113" y="20" width="195" height="14" uuid="92f920a8-9bf8-4fd7-a37b-79e910283e1a"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<subreport>
+				<reportElement mode="Transparent" x="0" y="0" width="494" height="36" uuid="1322341e-236f-4040-b8c0-de9d787c3ceb"/>
+				<subreportParameter name="cstid">
+					<subreportParameterExpression><![CDATA[$P{cstid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="acid">
+					<subreportParameterExpression><![CDATA[$P{acid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Final_Action.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

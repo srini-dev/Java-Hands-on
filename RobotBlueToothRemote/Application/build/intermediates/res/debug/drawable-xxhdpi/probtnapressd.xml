@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:drawable="@drawable/d"></item>
+            <item android:drawable="@drawable/d"></item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:drawable="@drawable/d"></item>
+            <item android:drawable="@drawable/d"></item>
+        </layer-list>
+    </item>
+    <item android:state_hovered="true">
+        <layer-list>
+            <item android:drawable="@drawable/d"></item>
+            <item android:drawable="@drawable/d"></item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:drawable="@drawable/dclk"></item>
+            <item android:drawable="@drawable/dclk"></item>
+        </layer-list>
+    </item>
+</selector><!-- From: file:/D:/Jyoti/Original%20V6/RobotBlueToothRemote/Application/src/main/res/drawable-xxhdpi/probtnapressd.xml -->

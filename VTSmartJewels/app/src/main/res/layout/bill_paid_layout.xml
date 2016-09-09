@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <TextView
+        android:id="@+id/blpd1"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:text="textview"
+        android:textColor="#FF62B0"
+        
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/blpd2"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/blpd1"
+        android:text="textview"
+        android:textColor="#FF62B0"
+        
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/blpd3"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/blpd2"
+        android:text="textview"
+
+        android:textColor="#FF62B0"
+        
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:text="New Text"
+        android:id="@+id/blpd4"
+        android:textColor="#FF62B0"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/blpd3"
+        android:gravity="right"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:text="New Text"
+        android:id="@+id/blpd5"
+        android:textColor="#FF62B0"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/blpd4"
+        android:gravity="right"
+        android:textSize="24sp"/>
+
+
+</RelativeLayout>

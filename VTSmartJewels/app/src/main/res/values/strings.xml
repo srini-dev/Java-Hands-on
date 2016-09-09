@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">VTSmartJewels</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_activity_sales_page">SalesPage</string>
+    <string name="title_activity_sold_items_layout">SoldItemsLayout</string>
+    <string name="title_activity_sold_item_layout">SoldItemLayout</string>
+
+    <string-array name="qtypArry">
+        <item>NosePins</item>
+        <item>Tops</item>
+        <item>Eye Rings</item>
+        <item>Pendent</item>
+        <item>Antic Items</item>
+        </string-array>
+    <string name="title_activity_pay">PayActivity</string>
+</resources>

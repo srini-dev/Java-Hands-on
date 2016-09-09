@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1618fd467fb5971c394741e8976ededb97aaee0a">
+        <dex dex="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-29ec9e403f62203926549994659ba5da596c21bc.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-2b57bec1b3e42068415b963c48c3ac994d96cc59.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-b2f7927f063c4a0611e4fd4fd1dab3d4ff095df3.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1618fd467fb5971c394741e8976ededb97aaee0a">
+        <dex dex="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-30512679a6e23eff530707c1fbfa84dcb6b6ee2c.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-9b21ce9a169260d037d1471dd5a43f9942ad2c97.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1618fd467fb5971c394741e8976ededb97aaee0a">
+        <dex dex="D:\Jyoti\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-c5f66f31296d2f368d64c6569ab58e0a16451494.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-1a1ecc7c9faac1ae309041992fc3ff5cf1662cf0.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1618fd467fb5971c394741e8976ededb97aaee0a">
+        <dex dex="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-c733659230d09e950f6398a2b86ddad33c913e24.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="D:\Jyoti\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-82a618f9eb819ed6c41e68ba26ebc93f17d3a0bf.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-bfeacb1719e702fd003434340e1843b22ab65524.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="D:\Jyoti\Original V4\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-7019fc4e84181b5e8e4abe865541a845c7a794ab.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-00bd4cf5c200f62ff24a7a43fa6d9b5c6e762551.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\Jyoti\BluetoothChat\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-6ea6bc181478f079aee446a6277fe39b462098a8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Srinivas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="D:\Jyoti\BluetoothChat\Application\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-10a5f3e2b21bc70d435cd6ac951f1e271aca74b1.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="D:\Jyoti\Original V6\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-754de41a45d5ec1cfe9c72f1a129d8ab69d6fb48.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\Jyoti\Original V5\BluetoothChat\Application\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-725b95355165652678f9556dfbba5bec354be198.jar" />
+    </item>
+    <item
+        jar="D:\Jyoti\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="D:\Jyoti\BluetoothChat\Application\build\intermediates\pre-dexed\debug\classes-3d20c5a777f002d87d02ad7f7c6cfd63f7b57048.jar" />
+    </item>
+
+</items>

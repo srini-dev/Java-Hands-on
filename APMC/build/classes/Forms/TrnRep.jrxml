@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="2880" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0cca6262-b90f-432c-962b-e6202292ebf0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="cstid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Transaction Where cid = $P{cstid} order by tid, slno asc;]]>
+	</queryString>
+	<field name="cid" class="java.lang.String"/>
+	<field name="tid" class="java.lang.String"/>
+	<field name="slno" class="java.lang.String"/>
+	<field name="tdat" class="java.sql.Timestamp"/>
+	<field name="reason" class="java.lang.String"/>
+	<field name="amt" class="java.lang.Double"/>
+	<field name="totamt" class="java.lang.Double"/>
+	<group name="cid">
+		<groupExpression><![CDATA[$F{cid}]]></groupExpression>
+		<groupHeader>
+			<band height="4"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="tid">
+		<groupExpression><![CDATA[$F{tid}]]></groupExpression>
+		<groupHeader>
+			<band height="5"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="totam">
+		<groupExpression><![CDATA[$F{totamt}]]></groupExpression>
+		<groupFooter>
+			<band height="33">
+				<textField>
+					<reportElement x="456" y="0" width="96" height="20" forecolor="#000000" uuid="48bff04b-dd0a-46e5-959c-fcb76fb99c8c"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{totamt}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="380" y="0" width="75" height="27" forecolor="#000000" backcolor="#FFFFFF" uuid="72dfbe15-598a-4dee-84f5-9564941a7c18"/>
+					<textElement>
+						<font fontName="Tunga" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ಒಟ್ಟು ಮೊತ್ತ :-]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="5"/>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28">
+			<staticText>
+				<reportElement mode="Opaque" x="85" y="1" width="55" height="27" forecolor="#000000" backcolor="#FFFFFF" uuid="4623d141-bfbe-4fc7-ba4c-1f03bbe89a53"/>
+				<textElement>
+					<font fontName="Tunga" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಕ್ರಂ ಸಂಖ್ಯೆ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="80" height="27" forecolor="#000000" backcolor="#FFFFFF" uuid="c91e1a10-3e31-4ab9-b4c1-bd3c475908c7"/>
+				<textElement>
+					<font fontName="Tunga" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ದಿನಾಂಕ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="145" y="1" width="99" height="27" forecolor="#000000" backcolor="#FFFFFF" uuid="713b2edf-69a2-46fc-af31-f5dae4616189"/>
+				<textElement>
+					<font fontName="Tunga" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಕಾರಣ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="456" y="2" width="96" height="25" forecolor="#000000" backcolor="#FFFFFF" uuid="d226313a-e4dd-43e7-b07d-5af2f73c5a9e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tunga" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ಮೊತ್ತ ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="85" y="0" width="43" height="26" uuid="b05a1e13-374e-41a5-838f-0dbaa847fa63"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{slno}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="80" height="26" uuid="33df44bc-1326-4544-8b78-523867a78a32"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tdat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="145" y="0" width="299" height="26" uuid="1422a558-9df8-46e6-8b08-3588ab782e58"/>
+				<textElement>
+					<font fontName="Tunga" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reason}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="456" y="0" width="96" height="26" uuid="bc7b6fc4-9b26-4d06-beab-9f5217f07483"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
