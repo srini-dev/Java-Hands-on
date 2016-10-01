@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>VodersBench/Blog</title>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.css'>
+    <link href="../css/flat-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="myApp"  ng-controller="BlogController" >
+  
+  <div >
+     
+  
+      <div class="topbar overlay">
+        <div class="container ">
+          <div class="row">
+           <center>
+            <div class="col-md-6">
+             
+              <h4 ng-click="selectTab('btb')">{{blog.btitle}}</h4>
+                
+            </div>
+            </center>
+            <center>
+            <div class="col-md-6" >
+              <nav role='navigation'>
+                <ul>
+                  <li class="pushed"><button href="#" ng-click="selectTab('btb')" class="btn btn-primary">See All Posts</button></li> &asymp;
+                  <li ><button href="#" ng-click="selectTab('new')" class="btn btn-primary">Add New Post</button></li>
+                    <li style="float:right;right:0;"><h6 class="sign-out"><strong><a href="menu.html">Sign Out</a></strong></h6></li>
+                </ul>
+              </nav> 
+           
+            </div>
+                </center>
+          </div>
+        </div>
+         </div>
+ 
+      
+      <div class="content">
+        <div class="container">
+          <div class="row">
+           
+           
+           <!-- BlOG PORSION STARTS----------------------------------------------------------- -->
+            <ul class="post-grid spacing" ng-show="isSelected('btb')">
+          <li ng-repeat="post in blogs" class="col-s-4" ng-class="{ 'reset-s' : $index%3==0 }" ng-click="selectTab(post.bid)" >
+            <h3>{{post.btitle}}</h3><h5>{{post.bid}}</h5>
+            <p>{{post.bdy}}</p>
+            <p class="fa fa-commenting push-left">{{post.bcmtct}}
+            </p>
+            <p class="fa fa-thumbs-up push-right">{{post.blikct}}
+            </p>
+          </li>
+        </ul>
+        <div class="post" ng-repeat="post in blogs" ng-show="isSelected(post.bid)">
+          <div>
+            
+            <h2>{{post.btitle}}</h2>
+            <img src="{{post.bimg}}" ng-show="{{post.bimg}}"/>
+            <cite>by {{post.busr}}</cite>
+            <div class="post-body">
+             <p>
+               {{post.bdy}}
+             </p> 
+            </div>
+            
+            <div class="comments" >
+              <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.blikct}}</button>
+              <h3>Comments :</h3>
+              <ul>
+               <li ng-repeat="comment in coments">
+                 "{{comment.cmt}}"
+                 <cite>- <b>{{comment.busr}}</b></cite>
+               </li>
+              </ul>
+              
+              
+              <form name="commentForm" ng-submit="addCom(comment,post.bid)" novalidate>
+                <h4>Add Comment</h4>
+                  <textarea ng-model="comment.cmt" cols="30" value="" rows="10"  required></textarea>
+                <label for="">by:</label>
+                  <input type="text" ng-model="comment.busr" required placeholder="Name"/>
+                  
+                  <input type="submit" value="Submit" />
+                </form>
+            
+            </div>
+        </div>
+      </div>
+      <!-- BlOG PORSION ENDS----------------------------------------------------------- -->
+       
+       <!-- ADD NEW BlOG FORM STARTS----------------------------------------------------------- -->
+        <div class="post" ng-show="isSelected('new')">
+          <h2>Add New Post</h2>
+          
+          <form name="postForm" ng-submit=" addBlog(blogm)" novalidate>
+                  <h4>Title</h4>
+                  <input type="text" ng-model="blogm.btitle"/>
+                  <h4>Body</h4>
+                  <textarea ng-model="blogm.bdy"  rows="10"></textarea>
+                  <label for="">Featured Image URL</label>
+                  <input type="text" ng-model="blogm.bimg" placeholder="http://placekitten.com/g/2000/600" />
+                  <label for="">by:</label>
+                  <input type="text" ng-model="blogm.busr" placeholder="Author Name" required/>
+                  
+                  <input type="submit" value="Submit" />
+                </select></form>
+          
+            </div>
+        <!-- ADD NEW BlOG FORM ENDS----------------------------------------------------------- -->
+          </div>
+        </div>
+        
+    </div>
+  </div>
+ 
+ 
+</body>
+    <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-animate.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/jquery-2.1.0.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/responsive.js'></script>
+
+<!-- <script src="../aj/blog_controller.js"></script>
+ <script src="../aj/app.js"></script> -->
+ 
+   	<script src="../aj/node_modules/angular/angular.js"></script>
+    <script src="../aj/app.js"></script>
+    <script src="../aj/blog_controller.js"></script>
+    <script src="../aj/blog_service.js"></script>
+
+       <!--  <script src="../js/index.js"></script> -->
+
+    
+    
+    
+  </body>
+</html>
