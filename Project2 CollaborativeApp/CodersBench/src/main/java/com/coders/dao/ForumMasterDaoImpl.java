@@ -57,4 +57,17 @@ public class ForumMasterDaoImpl implements ForumMaterDao{
 		
 		return null;
 	}
+	@Transactional
+	public int getlikes(int fid) {
+		String hql = "from ForumMaster where fid=" + fid;
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		
+		@SuppressWarnings("unchecked")
+		List<ForumMaster> listFrm = (List<ForumMaster>) query.list();
+		
+		if (listFrm != null && !listFrm.isEmpty()) {
+			return listFrm.get(0).getFcmtct();
+		}
+		return 0;
+	}
 }

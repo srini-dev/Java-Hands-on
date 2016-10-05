@@ -2,13 +2,12 @@
 
 angular.module('myApp').controller('ForumController', ['$scope', 'ForumService', function($scope, ForumService) {
    
-	$scope.forumm={fid:'',ftitle:'',fdy:'',fimg:null,fpostdat:null,fusr:'',fsec:'',fcmtct:'',flikct:''};
+	$scope.forumm={fid:'',fcmtct:'',fdy:'',flikct:'',fpostdat:null,fsec:'',ftitle:'',fusr:'',fimg:null};
     $scope.forumms=[];
 	
     $scope.reply={rid:'',fid:'', rpl:'',fusr:'',rdt:''};
     $scope.repls=[];
-    
-    
+   
     fetchAllForums();
     
     $scope.titl="CoderBenchForum"
@@ -31,9 +30,7 @@ angular.module('myApp').controller('ForumController', ['$scope', 'ForumService',
     
     $scope.addForum=function(forumm)
     {
-    	forumm.fsec='ggg';
-    	forumm.fcmtct=0;
-    	forumm.flikct=0;
+//    	
     	 console.log(forumm);
     	 console.log('Sending alllllllllllllllllll');
     	 ForumService.addForum(forumm)
@@ -43,8 +40,6 @@ angular.module('myApp').controller('ForumController', ['$scope', 'ForumService',
             console.error('Error while creating blog');
         });
     }
-    
-    
     
     function fetchAllRep(fid){
     	ForumService.fetchAllRep(fid)
@@ -60,13 +55,18 @@ angular.module('myApp').controller('ForumController', ['$scope', 'ForumService',
         });
     }
     
-    $scope.addRpl=function(reply,fid)
+    $scope.addRpl=function(reply,fid,forumm)
     {
     	 reply.fid=fid;
+    	 console.log(forumm);
     	 console.log(reply);
     	// fetchAllRep(fid);
     	 ForumService.addRpl(reply)
         .then(
+        		function(response){
+        			forumm.fcmtct=forumm.fcmtct+1;
+        			ForumService.addForum(forumm);
+                },
         		
         		function(errResponse){
             console.error('Error while creating comnt');
@@ -90,8 +90,16 @@ $scope.selectTab = function(setTab){
 //   ------------------------------
 //   comment starts
     
-  
-    
+ 
+  $scope.updateLik = function(x,y,forumm){
+		
+	      console.log(x,"JKKJK JK JKJK KJ KJKJ")
+	      forumm.flikct=x;
+	      forumm.fid=y;
+	      
+	    ForumService.addForum(forumm);
+	    };
+	    
    
 
 }]);

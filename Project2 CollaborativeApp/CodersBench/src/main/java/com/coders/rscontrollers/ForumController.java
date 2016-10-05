@@ -51,15 +51,24 @@ public class ForumController
            System.out.println("Done Here Blog Storing ");
            forumMaterDao.SaveOrUpdate(forumMaster);
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(forumMaster.getFid()).toUri());
+        headers.setLocation(ucBuilder.path("/frmadd/{fid}").buildAndExpand(forumMaster.getFid()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
  
   //REPLYES---------------------------------------------------------------------------------------------------------------------
  @RequestMapping(value = "/reply/insert/", method = RequestMethod.POST )
- public ResponseEntity<Void> addReply(@ModelAttribute("reply") FReply frply, @RequestBody FReply fReply,   UriComponentsBuilder ucBuilder) {
+ public ResponseEntity<Void> addReply(@ModelAttribute("reply") FReply frply,@RequestBody FReply fReply,   UriComponentsBuilder ucBuilder) {
         System.out.println("Done Here commect Storing ");
         fReplyDao.SaveOrUpdate(fReply);
+//        int x=0;
+//        x=forumMaterDao.getlikes(fReply.getFid());
+//        System.out.println("UUUUUUUUUUUUUUUUUUUUU"+x);
+//        System.out.println("UUUUUUUUUUUUUUUUUUUUU  "+forumMaster.getFdy());
+//        x=x+1;
+//        forumMaster.setFcmtct(x);
+//        forumMaster.setFid(fReply.getFid());;
+//        forumMaterDao.SaveOrUpdate(forumMaster);
+        
      HttpHeaders headers = new HttpHeaders();
      headers.setLocation(ucBuilder.path("/reply/{fid}").buildAndExpand(fReply.getFid()).toUri());
      return new ResponseEntity<Void>(headers, HttpStatus.CREATED);

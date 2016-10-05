@@ -50,12 +50,16 @@ angular.module('myApp').controller('BlogController', ['$scope', 'BlogService', f
             console.error('Error while creating blog');
         });
     }
-    $scope.addCom=function(comment,bid)
+    $scope.addCom=function(comment,bid,blogm)
     {
     	 comment.bid=bid;
     	 console.log(comment);
     	 BlogService.addCom(comment)
         .then(
+        		function(response){
+        			blogm.bcmtct=blogm.bcmtct+1;
+        			BlogService.addBlog(blogm);
+                },
         		
         		function(errResponse){
             console.error('Error while creating comnt');
@@ -79,7 +83,14 @@ $scope.selectTab = function(setTab){
 //   ------------------------------
 //   comment starts
     
-  
+    $scope.contLik = function(x,y,blogm){
+		
+	      console.log(x,"JKKJK JK JKJK KJ KJKJ")
+	      blogm.blikct=x;
+	      blogm.bid=y;
+	      
+	      BlogService.addBlog(blogm);
+	    };
     
    
 

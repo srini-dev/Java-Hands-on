@@ -14,4 +14,6 @@ public interface ForumMaterDao {
 	public void delete(int fid);
 	
 	public ForumMaster getFrm(int fid);//singl view
+	
+	public int getlikes(int fid);
 }
